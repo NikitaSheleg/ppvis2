@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Students>
+  <student>
+    <fullName>pavel</fullName>
+    <group>88121</group>
+    <examName>ppvis</examName>
+    <examMark>7</examMark>
+  </student>
+</Students>
