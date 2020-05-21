@@ -6,26 +6,15 @@ import entity.Exam;
 import entity.Student;
 import util.Sax;
 
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTable;
-import javax.swing.JTextField;
+import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
-import java.awt.Dimension;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class MainView extends JFrame {
     private JFileChooser fileChooser;
@@ -103,7 +92,6 @@ public class MainView extends JFrame {
         AtomicInteger leftIndex = new AtomicInteger(0);
 
         pageController.setAddNote(addNote);
-        addNote.setPageController(pageController);
         pageController.setStudents(sax.getStudents());
         right.addActionListener(e -> {
             if (pageNum.get() < sax.getStudents().size() / 10) {
@@ -112,8 +100,6 @@ public class MainView extends JFrame {
                 pageNum.getAndIncrement();
                 pageController.setPageNumber(pageNum.get());
                 pageController.scroll(leftIndex.get(), rightIndex.get());
-
-
             }
         });
         left.addActionListener(e -> {
@@ -135,14 +121,14 @@ public class MainView extends JFrame {
         last.addActionListener(e -> {
             pageController.lastPage();
         });
-
         main.add(table);
-        main.add(last);
+
         main.add(addStudentAndExams);
         main.add(findStudents);
         main.add(deleteButton);
-        main.add(right);
         main.add(left);
+        main.add(right);
+        main.add(last);
         main.add(exams);
         main.add(groups);
         main.updateUI();

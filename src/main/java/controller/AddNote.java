@@ -4,22 +4,18 @@ import entity.Exam;
 import entity.Student;
 import util.Dom;
 
-import javax.swing.JComboBox;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
+import javax.swing.*;
+import javax.swing.table.*;
+import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Vector;
 
 public class AddNote {
     private List<Student> students = new ArrayList<>();
     private int row = 0;
-    private PageController pageController;
-
-    public void setPageController(PageController pageController) {
-        this.pageController = pageController;
-    }
 
     public void updateComboBox(JComboBox<String> comboBox, String name) {
 
@@ -35,13 +31,12 @@ public class AddNote {
     }
 
 
-
     public void addNewStudentInTable(JTable table, int row, Student student) {
         student.setAverageMark();
         int column = 2;
         table.setValueAt(student.getFullName(), row, 0);
         table.setValueAt(student.getGroup(), row, 1);
-        for (Exam exam :student.getExams()) {
+        for (Exam exam : student.getExams()) {
             if (column >= 2 && table.getModel().getColumnCount() <= student.getExams().size() * 2) {
                 ((DefaultTableModel) table.getModel()).addColumn(122);
                 ((DefaultTableModel) table.getModel()).addColumn(12);
@@ -66,10 +61,11 @@ public class AddNote {
             int column = 2;
             table.setValueAt(student.getFullName(), row, 0);
             table.setValueAt(student.getGroup(), row, 1);
+
             for (Exam exam : student.getExams()) {
                 if (column >= 2 && table.getModel().getColumnCount() <= student.getExams().size() * 2) {
-                    ((DefaultTableModel) table.getModel()).addColumn(122);
-                    ((DefaultTableModel) table.getModel()).addColumn(12);
+                    ((DefaultTableModel) table.getModel()).addColumn("exam");
+                    ((DefaultTableModel) table.getModel()).addColumn("mark");
 
                 }
                 table.setValueAt(exam.getName(), row, column);
@@ -104,11 +100,22 @@ public class AddNote {
         student.setExams(exams);
         students.add(student);
         Dom.setStudents(students, file);
-        addNewStudentInTable(table, table.getRowCount() - 1, students.get(students.size()-1));
+        addNewStudentInTable(table, table.getRowCount() - 1, students.get(students.size() - 1));
 
     }
 
     public void setStudents(List<Student> students) {
         this.students = students;
+    }
+
+    public void addInStudentsList(Student student) {
+        this.students.add(student);
+    }
+}
+
+class JComponentTableCellRenderer implements TableCellRenderer {
+    public Component getTableCellRendererComponent(JTable table, Object value,
+                                                   boolean isSelected, boolean hasFocus, int row, int column) {
+        return (JComponent) value;
     }
 }

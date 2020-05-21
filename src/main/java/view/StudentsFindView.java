@@ -14,6 +14,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -87,8 +88,11 @@ public class StudentsFindView extends JFrame {
             panel.add(button);
         }
         panel.add(findButton);
+        panel.add(new Label("minMark"));
         panel.add(minMark);
+        panel.add(new Label("maxMark"));
         panel.add(maxMark);
+        panel.add(new Label("any student info"));
         panel.add(studentsFindInfo);
 
         add(panel);

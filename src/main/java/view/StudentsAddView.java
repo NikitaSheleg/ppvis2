@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
-import java.awt.Dimension;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -29,7 +29,7 @@ public class StudentsAddView extends JFrame {
         JPanel panel = new JPanel();
         JTextField studentsFullName = new JTextField(20);
         JTextField studentsGroup = new JTextField(6);
-        DefaultTableModel tableModel = new DefaultTableModel(1, 2);
+        DefaultTableModel tableModel = new DefaultTableModel(1,2);
         JTable examsTable = new JTable(tableModel);
         JButton addRowInTable = new JButton("+");
         JButton addStudentInfo = new JButton("add new student");
@@ -65,10 +65,12 @@ public class StudentsAddView extends JFrame {
             }
         });
         studentsFullName.setPreferredSize(new Dimension(300, 40));
-
+        panel.add(new Label("exam name and mark"));
         panel.add(examsTable);
         panel.add(addRowInTable);
+        panel.add(new Label("full name"));
         panel.add(studentsFullName);
+        panel.add(new Label("group"));
         panel.add(studentsGroup);
         panel.add(addStudentInfo);
         add(panel);
