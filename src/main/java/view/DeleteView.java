@@ -1,6 +1,7 @@
 package view;
 
 import controller.DeleteNote;
+import controller.FindNote;
 import controller.PageController;
 import entity.Student;
 import util.Sax;
@@ -20,20 +21,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DeleteView extends JFrame {
-    public DeleteView(PageController pageController,JTable table, File file) {
+    public DeleteView(PageController pageController, JTable table, File file) {
         super("delete");
         JPanel panel = new JPanel();
         Sax sax = new Sax();
-
+        FindNote findNote = new FindNote();
         sax.parse(file);
+        findNote.setStudents(sax.getStudents());
+
         List<JRadioButton> buttonList = new ArrayList<>();
         JButton deleteButton = new JButton("delete");
-        JTextField fullName = new JTextField(25);
+
         JTextField minMark = new JTextField(4);
         JTextField maxMark = new JTextField(4);
-        JTextField examName = new JTextField(15);
-        JTextField group = new JTextField(10);
-        DeleteNote deleteNote = new DeleteNote();
+        JTextField data = new JTextField(15);
+
+
+        DeleteNote deleteNote = new DeleteNote(findNote);
         JRadioButton byName = new JRadioButton("by name");
         JRadioButton byAverageMark = new JRadioButton("by average mark");
         JRadioButton byMarkAndExamName = new JRadioButton("by mark and exam name");
@@ -45,37 +49,37 @@ public class DeleteView extends JFrame {
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                for (Student student : sax.getStudents()) {
-                    for (JRadioButton radioButton : buttonList) {
-                        if (radioButton.isSelected()) {
-                            switch (radioButton.getText()) {
-                                case "by name": {
-                                    if (student.getFullName().equals(fullName.getText())) {
-                                        deleteNote.deleteStudentByName(student, file, table);
-                                    }
-                                    break;
-                                }
-                                case "by group": {
-                                    deleteNote.deleteByGroup(file, table, Integer.parseInt(group.getText()));
-                                    break;
-                                }
-                                case "by mark": {
-                                    deleteNote.deleteStudentByAverageMark(file, table, Double.parseDouble(minMark.getText()), Double.parseDouble(maxMark.getText()));
-                                    break;
-                                }
-                                case "by mark and exam name": {
-                                    deleteNote.deleteByMarkAndExamName(file, table, Double.parseDouble(minMark.getText()), Double.parseDouble(maxMark.getText()), examName.getText());
-                                    break;
-                                }
-                                default: {
-                                    JOptionPane.showMessageDialog(DeleteView.this,
-                                            "такого нет");
-                                }
+
+                for (JRadioButton radioButton : buttonList) {
+                    if (radioButton.isSelected()) {
+                        switch (radioButton.getText()) {
+                            case "by name": {
+
+                                deleteNote.deleteStudentByName(data.getText(), file, table);
+
+                                break;
+                            }
+                            case "by group": {
+                                deleteNote.deleteByGroup(file, table, Integer.parseInt(data.getText()));
+                                break;
+                            }
+                            case "by mark": {
+                                deleteNote.deleteStudentByAverageMark(file, table, Double.parseDouble(minMark.getText()), Double.parseDouble(maxMark.getText()));
+                                break;
+                            }
+                            case "by mark and exam name": {
+                                deleteNote.deleteByMarkAndExamName(file, table, Double.parseDouble(minMark.getText()), Double.parseDouble(maxMark.getText()), data.getText());
+                                break;
+                            }
+                            default: {
+                                JOptionPane.showMessageDialog(DeleteView.this,
+                                        "такого нет");
                             }
                         }
                     }
-
                 }
+
+
             }
         });
         for (JRadioButton button : buttonList) {
@@ -86,8 +90,8 @@ public class DeleteView extends JFrame {
         panel.add(deleteButton);
         panel.add(minMark);
         panel.add(maxMark);
-       // panel.add(examName);
-        panel.add(group);
+        //panel.add(examName);
+        panel.add(data);
 
         add(panel);
 

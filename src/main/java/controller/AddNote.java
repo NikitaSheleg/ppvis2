@@ -5,11 +5,11 @@ import entity.Student;
 import util.Dom;
 
 import javax.swing.*;
-import javax.swing.table.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellRenderer;
 import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Vector;
 
@@ -113,9 +113,3 @@ public class AddNote {
     }
 }
 
-class JComponentTableCellRenderer implements TableCellRenderer {
-    public Component getTableCellRendererComponent(JTable table, Object value,
-                                                   boolean isSelected, boolean hasFocus, int row, int column) {
-        return (JComponent) value;
-    }
-}

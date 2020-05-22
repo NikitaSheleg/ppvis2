@@ -1,18 +1,11 @@
 package view;
 
 import controller.AddNote;
-import controller.FindNote;
-import entity.Exam;
 import entity.Student;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTable;
-import javax.swing.JTextField;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 
 public class StudentFound {
 
