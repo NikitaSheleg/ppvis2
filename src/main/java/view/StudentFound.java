@@ -19,12 +19,13 @@ public class StudentFound {
 
     }
 
-    public StudentFound(List<Student> students, JTable table) {
+    public StudentFound(List<Student> students, JTable table,JFrame frame) {
         ((DefaultTableModel) table.getModel()).setRowCount(1);
         AddNote addNote = new AddNote();
         addNote.setStudents(students);
         addNote.addInTable(table);
-
+        JOptionPane.showMessageDialog(frame,
+                students.size());
     }
 
 

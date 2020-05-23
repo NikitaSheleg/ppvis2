@@ -66,6 +66,7 @@ public class MainView extends JFrame {
         JButton last = new JButton("last");
         sax.parse(fileChooser.getSelectedFile());
         addNote.setStudents(sax.getStudents());
+        pageController.setStudents(sax.getStudents());
         deleteButton.addActionListener(e -> new DeleteView(pageController, table, fileChooser.getSelectedFile()));
 
         addStudentAndExams.addActionListener(e -> new StudentsAddView(fileChooser.getSelectedFile(), table, exams, pageController));
@@ -94,7 +95,7 @@ public class MainView extends JFrame {
         pageController.setAddNote(addNote);
 
         right.addActionListener(e -> {
-            pageController.setStudents(sax.getStudents());
+
             if (pageNum.get() < sax.getStudents().size() / 10) {
                 rightIndex.addAndGet(10);
                 leftIndex.addAndGet(10);
@@ -104,7 +105,7 @@ public class MainView extends JFrame {
             }
         });
         left.addActionListener(e -> {
-            pageController.setStudents(sax.getStudents());
+
             if (pageController.isLast()) {
                 leftIndex.set((sax.getStudents().size() - sax.getStudents().size() % 10) - 10);
                 rightIndex.set((sax.getStudents().size() - sax.getStudents().size() % 10));
@@ -121,7 +122,7 @@ public class MainView extends JFrame {
             }
         });
         last.addActionListener(e -> {
-            pageController.setStudents(sax.getStudents());
+
             pageController.lastPage();
         });
         main.add(table);

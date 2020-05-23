@@ -11,7 +11,6 @@ import java.util.List;
 public class FindNote {
 
     List<Student> students;
-
     public void setStudents(List<Student> students) {
         this.students = students;
     }
@@ -58,5 +57,7 @@ public class FindNote {
         return foundStudents;
     }
 
-
+    public List<Student> getStudents() {
+        return students;
+    }
 }

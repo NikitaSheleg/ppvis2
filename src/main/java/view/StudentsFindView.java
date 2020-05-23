@@ -46,17 +46,17 @@ public class StudentsFindView extends JFrame {
                             break;
                         }
                         case "by group": {
-                            new StudentFound(find.findByGroup(Integer.parseInt(studentsFindInfo.getText())),table);
+                            new StudentFound(find.findByGroup(Integer.parseInt(studentsFindInfo.getText())),table,this);
                             pageController.setStudents(find.findByGroup(Integer.parseInt(studentsFindInfo.getText())));
                             break;
                         }
                         case "by mark": {
-                            new StudentFound(find.findByAverageMark(Double.parseDouble(minMark.getText()), Double.parseDouble(maxMark.getText())),table);
+                            new StudentFound(find.findByAverageMark(Double.parseDouble(minMark.getText()), Double.parseDouble(maxMark.getText())),table,this);
                             pageController.setStudents(find.findByAverageMark(Double.parseDouble(minMark.getText()), Double.parseDouble(maxMark.getText())));
                             break;
                         }
                         case "by mark and exam name": {
-                            new StudentFound(find.findByMarkAndExamName(Double.parseDouble(minMark.getText()), Double.parseDouble(maxMark.getText()), studentsFindInfo.getText()),table);
+                            new StudentFound(find.findByMarkAndExamName(Double.parseDouble(minMark.getText()), Double.parseDouble(maxMark.getText()), studentsFindInfo.getText()),table,this);
                             pageController.setStudents(find.findByMarkAndExamName(Double.parseDouble(minMark.getText()), Double.parseDouble(maxMark.getText()), studentsFindInfo.getText()));
                             break;
                         }
