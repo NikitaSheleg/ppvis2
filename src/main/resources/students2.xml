@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Students>
+  <student>
+    <fullName>Vladimir Dicussar</fullName>
+    <group>821701</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>7</examMark>
+  </student>
+  <student>
+    <fullName>Michail Ivanov</fullName>
+    <group>521704</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>Andrey Alishevich</fullName>
+    <group>821704</group>
+    <examName>math</examName>
+    <examMark>8</examMark>
+    <examName>chemistry</examName>
+    <examMark>4</examMark>
+  </student>
+  <student>
+    <fullName>Andreev Gleb</fullName>
+    <group>821703</group>
+    <examName>geology</examName>
+    <examMark>8</examMark>
+    <examName>ppvio</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>Bogurov Nikita</fullName>
+    <group>821703</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>Sheleg Nikita</fullName>
+    <group>821703</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>8</examMark>
+  </student>
+  <student>
+    <fullName>Nikadon Vadim</fullName>
+    <group>821703</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>Eugen Griffin</fullName>
+    <group>921704</group>
+    <examName>ppvio</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>Makarchuk Egor</fullName>
+    <group>821701</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>Zalesskiy Andrey</fullName>
+    <group>521704</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>Drapun Artem</fullName>
+    <group>521704</group>
+    <examName>ppvio</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>Snejco Vladimir</fullName>
+    <group>521704</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+    <examName>simoib</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>Bruner Anton</fullName>
+    <group>521704</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+    <examName>simoib</examName>
+    <examMark>7</examMark>
+  </student>
+  <student>
+    <fullName>Vladimirsky Nikolay</fullName>
+    <group>821703</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+    <examName>ppvio</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>Filippov Nikita</fullName>
+    <group>521704</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+    <examName>OTS</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>HHHHHHH1</fullName>
+    <group>521704</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>HHHHHHH2</fullName>
+    <group>521704</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>HHHHHHH3</fullName>
+    <group>521704</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>HHHHHHH4</fullName>
+    <group>521704</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>HHHHHHH5</fullName>
+    <group>521704</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>gleb</fullName>
+    <group>821703</group>
+    <examName>simoib</examName>
+    <examMark>8</examMark>
+    <examName>phis</examName>
+    <examMark>9</examMark>
+    <examName>politologiya</examName>
+    <examMark>10</examMark>
+  </student>
+  <student>
+    <fullName>vadim</fullName>
+    <group>821703</group>
+    <examName>ppvis</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>nikita</fullName>
+    <group>821703</group>
+    <examName>mois</examName>
+    <examMark>4</examMark>
+  </student>
+  <student>
+    <fullName>Samuel L Jackson</fullName>
+    <group>821703</group>
+    <examName>force</examName>
+    <examMark>10</examMark>
+  </student>
+  <student>
+    <fullName>Dean Winchester</fullName>
+    <group>821666</group>
+    <examName>ppvis</examName>
+    <examMark>8</examMark>
+    <examName>ppvio</examName>
+    <examMark>8</examMark>
+  </student>
+  <student>
+    <fullName>Sam Winchester</fullName>
+    <group>821666</group>
+    <examName>ppvis</examName>
+    <examMark>9</examMark>
+    <examName>ppvio</examName>
+    <examMark>10</examMark>
+  </student>
+  <student>
+    <fullName>Vadim Barush</fullName>
+    <group>820456</group>
+    <examName>simoib</examName>
+    <examMark>8</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>Venckute Victory</fullName>
+    <group>821703</group>
+    <examName>ppvis</examName>
+    <examMark>9</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+  </student>
+  <student>
+    <fullName>Oleshkevich Alexandra</fullName>
+    <group>821703</group>
+    <examName>ppvis</examName>
+    <examMark>9</examMark>
+    <examName>mois</examName>
+    <examMark>9</examMark>
+  </student>
+</Students>
